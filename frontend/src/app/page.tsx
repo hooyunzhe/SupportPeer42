@@ -1,6 +1,8 @@
 'use client';
 import '@mantine/core/styles.css';
 import { Box } from '@mantine/core';
+import SupportTicket from '@/components/SupportTicket';
+import SupportTicketHeader from '@/components/SupportTicketHeader';
 
 export default function Home() {
   return (
@@ -10,9 +12,11 @@ export default function Home() {
       bg='cyan'
       style={{
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
       }}
-    ></Box>
+    >
+      <SupportTicket title='Title' status={false} />
+    </Box>
   );
 }
