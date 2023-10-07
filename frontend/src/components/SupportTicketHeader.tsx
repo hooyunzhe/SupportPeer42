@@ -1,5 +1,4 @@
-import { Avatar, Blockquote, Box, Flex, Title } from '@mantine/core';
-import { Content } from 'next/font/google';
+import { Flex, Title } from '@mantine/core';
 
 interface SupportTicketHeaderProps {
   title: string;
@@ -11,10 +10,14 @@ export default function SupportTicketHeader({
   status,
 }: SupportTicketHeaderProps) {
   return (
-    <Flex bg={status ? 'green' : 'red'} w='100%' h='25%' justify={'center'} align='center'>
-      <Title order={3}>
-       { title}
-       </Title>
+    <Flex
+      bg={status ? 'green' : 'red'}
+      w='100%'
+      h='25%'
+      justify={'center'}
+      align='center'
+    >
+      <Title order={3}>{title}</Title>
     </Flex>
   );
 }

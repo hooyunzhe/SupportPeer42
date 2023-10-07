@@ -1,22 +1,21 @@
 'use client';
 import '@mantine/core/styles.css';
-import { Box } from '@mantine/core';
-import SupportTicket from '@/components/SupportTicket';
-import SupportTicketHeader from '@/components/SupportTicketHeader';
+import { Flex } from '@mantine/core';
+import { useState } from 'react';
+import { PageView } from '@/types/PageView';
+import HeaderArea from '@/components/HeaderArea';
+import ContentArea from '@/components/ContentArea';
 
 export default function Home() {
+  const [currentPageView, setCurrentPageView] = useState(PageView.DASHBOARD);
+
   return (
-    <Box
-      w='100vw'
-      h='100vh'
-      bg='cyan'
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <SupportTicket title='Title' status={false} />
-    </Box>
+    <Flex w='100vw' h='100vh' bg='cyan' direction='column'>
+      <HeaderArea
+        currentPageView={currentPageView}
+        changePageView={(newPageView) => setCurrentPageView(newPageView)}
+      />
+      <ContentArea currentPageView={currentPageView} />
+    </Flex>
   );
 }

@@ -1,8 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { MantineProvider } from '@mantine/core';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Support Peer 42',
@@ -16,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>
+      <body style={{ margin: '0px', overflow: 'hidden' }}>
         <MantineProvider>{children}</MantineProvider>
       </body>
     </html>

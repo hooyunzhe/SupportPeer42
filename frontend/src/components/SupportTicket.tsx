@@ -1,27 +1,14 @@
 import { Card } from '@mantine/core';
 import SupportTicketHeader from './SupportTicketHeader';
-import { Stats } from 'fs';
 import SupportTicketContent from './SupportTicketContent';
 import SupportTicketFooter from './SupportTicketFooter';
+import { SupportTicket } from '@/types/SupportTicketType';
 
 interface SupportTicketProps {
-  title: string;
-  description: string;
-  status: boolean;
-  user: string;
-  flag: boolean;
-  importance: number;
-  category: string
+  ticket: SupportTicket;
 }
-export default function SupportTicket({
-  title,
-  description,
-  status,
-  user,
-  flag,
-  importance,
-  category
-}: SupportTicketProps) {
+
+export default function SupportTicket({ ticket }: SupportTicketProps) {
   return (
     <Card
       w='20vw'
@@ -32,9 +19,13 @@ export default function SupportTicket({
         borderRadius: '15px',
       }}
     >
-      <SupportTicketHeader title={title} status={status}></SupportTicketHeader>
-      <SupportTicketContent description='This is a grave issue'></SupportTicketContent>
-      <SupportTicketFooter user='leulee' importance='II' category='tech'></SupportTicketFooter>
+      <SupportTicketHeader title={ticket.title} status={ticket.status} />
+      <SupportTicketContent description={ticket.description} />
+      <SupportTicketFooter
+        user={ticket.user}
+        importance={ticket.importance}
+        category={ticket.category}
+      />
     </Card>
   );
 }
