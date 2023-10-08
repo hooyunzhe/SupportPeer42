@@ -1,6 +1,6 @@
 'use client';
 import BocalHeaderArea from '@/components/BocalHeaderArea';
-import BocalContentArea from '@/components/BocalContentArea';
+import BocalContentArea from '@/components/Bocal/BocalContentArea';
 import { PageView } from '@/types/PageView';
 import { Flex } from '@mantine/core';
 import '@mantine/core/styles.css';

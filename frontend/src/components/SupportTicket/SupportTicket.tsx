@@ -2,13 +2,16 @@ import { Card } from '@mantine/core';
 import SupportTicketHeader from './SupportTicketHeader';
 import SupportTicketContent from './SupportTicketContent';
 import SupportTicketFooter from './SupportTicketFooter';
-import SupportTicket from '@/types/SupportTicketType';
+import { SupportTicketType } from '@/types/SupportTicketType';
+import { useSupportTicketActions } from '@/lib/stores/useSupportTicketStore';
 
 interface SupportTicketProps {
-  ticket: SupportTicket;
+  ticket: SupportTicketType;
 }
 
 export default function SupportTicket({ ticket }: SupportTicketProps) {
+  const { setSelectedSupportTicket } = useSupportTicketActions();
+
   return (
     <Card
       w='20vw'
@@ -18,14 +21,15 @@ export default function SupportTicket({ ticket }: SupportTicketProps) {
       style={{
         borderRadius: '15px',
       }}
+      onClick={() => setSelectedSupportTicket(ticket.id)}
     >
-      <SupportTicketHeader title={ticket.title} status={ticket.status} />
+      <SupportTicketHeader title={ticket.title} status={ticket.isOpen} />
       <SupportTicketContent description={ticket.description} />
       <SupportTicketFooter
         user={ticket.user}
         importance={ticket.importance}
         category={ticket.category}
-        status={ticket.status}
+        status={ticket.isOpen}
       />
     </Card>
   );

@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { PageView } from '@/types/PageView';
 import HeaderArea from '@/components/HeaderArea';
 import ContentArea from '@/components/ContentArea';
+import SupportTicketModal from '@/components/SupportTicketModal/SupportTicketModal';
 
 export default function Home() {
   const [currentPageView, setCurrentPageView] = useState(PageView.DASHBOARD);
@@ -23,6 +24,7 @@ export default function Home() {
         changePageView={(newPageView) => setCurrentPageView(newPageView)}
       />
       <ContentArea currentPageView={currentPageView} />
+      <SupportTicketModal />
     </Flex>
   );
 }

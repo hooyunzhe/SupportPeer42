@@ -1,9 +1,12 @@
-export default interface SupportTicketType {
+export interface SupportTicketType {
+  id: number;
   title: string;
   description: string;
-  status: boolean;
-  user: string;
+  isOpen: boolean;
+  category: string;
   flag: boolean;
   importance: string;
-  category: string;
+  location: string;
+  user: string;
+  chuppers: string[];
 }

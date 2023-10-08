@@ -1,7 +1,7 @@
 import { ScrollArea, SimpleGrid } from '@mantine/core';
 import { PageView } from '@/types/PageView';
-import SupportTicket from './SupportTicket';
-import SupportTicketType from '@/types/SupportTicketType';
+import SupportTicket from '../SupportTicket/SupportTicket';
+import { SupportTicketType } from '@/types/SupportTicketType';
 
 interface ContentAreaProps {
   currentPageView: PageView;
