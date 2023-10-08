@@ -10,14 +10,10 @@ export default function SupportTicketHeader({
   status,
 }: SupportTicketHeaderProps) {
   return (
-    <Flex
-      bg={status ? 'green' : 'red'}
-      w='100%'
-      h='25%'
-      justify={'center'}
-      align='center'
-    >
-      <Title order={3}>{title}</Title>
+    <Flex bg='black' w='100%' h='25%' justify={'center'} align='center'>
+      <Title order={3} c='white'>
+        {title}
+      </Title>
     </Flex>
   );
 }

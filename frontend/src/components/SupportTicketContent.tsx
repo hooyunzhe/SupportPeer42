@@ -8,7 +8,7 @@ export default function SupportTicketContent({
   description,
 }: SupportTicketContentProps) {
   return (
-    <Box h='55%' w='100%' bg='blue'>
+    <Box h='55%' w='100%' bg='#FFE9D0'>
       {description}
     </Box>
   );

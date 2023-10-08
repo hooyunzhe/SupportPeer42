@@ -1,6 +1,6 @@
 import { Button, Flex, TextInput, Title } from '@mantine/core';
-import NavigationMenu from './NavigationMenu';
 import { PageView } from '@/types/PageView';
+import { useTextFieldInput, useUtilActions } from '@/lib/stores/useUtilStore';
 
 interface HeaderAreaProps {
   currentPageView: PageView;
@@ -11,16 +11,14 @@ export default function HeaderArea({
   currentPageView,
   changePageView,
 }: HeaderAreaProps) {
+  const textFieldInput = useTextFieldInput();
+  const { setTextFieldInput } = useUtilActions();
+
   return (
     <Flex w='100%' h='25%' py='3vh' justify='center' align='center'>
-      <NavigationMenu
-        currentPageView={currentPageView}
-        changePageView={changePageView}
-      />
       <Flex
-        w='92%'
+        w='100%'
         h='100%'
-        mr='8%'
         direction='column'
         justify='space-evenly'
         align='center'
@@ -31,6 +29,8 @@ export default function HeaderArea({
             size='xl'
             w='50%'
             placeholder='What do you need help with?'
+            value={textFieldInput}
+            onChange={(event) => setTextFieldInput(event.target.value)}
           />
           <Button size='xl'>Next</Button>
         </Flex>
