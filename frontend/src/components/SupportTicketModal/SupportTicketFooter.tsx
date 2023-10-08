@@ -22,7 +22,7 @@ export default function SupportTicketFooter({
       justify='space-between'
       align='center'
       bg={`linear-gradient(90deg, #25262b 15%, ${
-        isOpen ? '#2D8B00' : '#F75560'
+        isOpen ? '#F75560' : '#2D8B00'
       } 100%)`}
       px='1vw'
     >

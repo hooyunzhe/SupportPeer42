@@ -1,30 +1,18 @@
-import { Flex } from '@mantine/core';
-import { PageView } from '@/types/PageView';
+import { Flex, Text } from '@mantine/core';
 import BocalStatCard from './BocalStatCard';
 
-interface HeaderAreaProps {
-  currentPageView: PageView;
-  changePageView: (newPageView: PageView) => void;
-}
-
-export default function BocalHeaderArea({
-  currentPageView,
-  changePageView,
-}: HeaderAreaProps) {
+export default function BocalHeaderArea() {
   return (
-    <Flex
-      w='95%'
-      h='40%'
-      py='3vh'
-      bg='blue'
-      justify='center'
-      align='center'
-      style={{
-        borderBottomLeftRadius: '30px',
-        borderBottomRightRadius: '30px',
-      }}
-    >
-      <Flex w='92%' h='100%' mr='8%' justify='space-evenly' align='center'>
+    <Flex w='100%' h='40%' direction='column' align='center'>
+      <Text
+        size='3vw'
+        variant='gradient'
+        mt='2vh'
+        gradient={{ from: 'darkgreen', to: 'blue', deg: 90 }}
+      >
+        Support Peer
+      </Text>
+      <Flex w='75%' h='100%' justify='space-around' align='center'>
         <BocalStatCard value={1} description='ticket flagged with bocal' />
         <BocalStatCard value={3} description='open tickets' />
         <BocalStatCard value={7} description='closed tickets' />

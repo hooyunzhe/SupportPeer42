@@ -2,13 +2,8 @@ import { ScrollArea, SimpleGrid } from '@mantine/core';
 import SupportTicket from './SupportTicket/SupportTicket';
 import { useSupportTickets } from '@/lib/stores/useSupportTicketStore';
 import { useTextFieldInput } from '@/lib/stores/useUtilStore';
-import { PageView } from '@/types/PageView';
 
-interface ContentAreaProps {
-  currentPageView: PageView;
-}
-
-export default function ContentArea({ currentPageView }: ContentAreaProps) {
+export default function ContentArea() {
   const supportTickets = useSupportTickets();
   const textFieldInput = useTextFieldInput();
 

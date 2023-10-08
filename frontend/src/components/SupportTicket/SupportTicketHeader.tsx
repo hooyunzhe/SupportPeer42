@@ -12,7 +12,7 @@ export default function SupportTicketHeader({
   return (
     <Flex
       bg={`linear-gradient(-90deg, #25262b 15%, ${
-        status ? '#2D8B00' : '#F75560'
+        status ? '#F75560' : '#2D8B00'
       } 100%)`}
       w='100%'
       h='20%'

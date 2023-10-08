@@ -13,6 +13,7 @@ export default function BocalStatCard({
     <Flex
       w='14vw'
       h='14vw'
+      bg='cyan'
       style={{
         border: 'solid 5px cyan',
         borderRadius: '50%',
