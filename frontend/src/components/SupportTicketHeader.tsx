@@ -1,4 +1,4 @@
-import { Flex, Title } from '@mantine/core';
+import { Avatar, Flex, Title } from '@mantine/core';
 
 interface SupportTicketHeaderProps {
   title: string;
@@ -14,10 +14,16 @@ export default function SupportTicketHeader({
       bg={status ? 'green' : 'red'}
       w='100%'
       h='25%'
-      justify={'center'}
+      justify={'space-evenly'}
       align='center'
     >
-      <Title order={3}>{title}</Title>
+      <Flex>
+        <Title order={3}>{title}</Title>
+      </Flex>
+      <Flex>
+        <Avatar color='black'></Avatar>
+        <Avatar color='black'></Avatar>
+      </Flex>
     </Flex>
   );
 }
