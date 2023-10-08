@@ -1,5 +1,4 @@
 import { Flex } from '@mantine/core';
-import NavigationMenu from './NavigationMenu';
 import { PageView } from '@/types/PageView';
 import BocalStatCard from './BocalStatCard';
 
@@ -14,7 +13,7 @@ export default function BocalHeaderArea({
 }: HeaderAreaProps) {
   return (
     <Flex
-      w='100%'
+      w='95%'
       h='40%'
       py='3vh'
       bg='blue'
@@ -25,10 +24,6 @@ export default function BocalHeaderArea({
         borderBottomRightRadius: '30px',
       }}
     >
-      <NavigationMenu
-        currentPageView={currentPageView}
-        changePageView={changePageView}
-      />
       <Flex w='92%' h='100%' mr='8%' justify='space-evenly' align='center'>
         <BocalStatCard value={1} description='ticket flagged with bocal' />
         <BocalStatCard value={3} description='open tickets' />

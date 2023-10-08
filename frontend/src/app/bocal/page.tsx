@@ -16,6 +16,7 @@ export default function Home() {
       bg='cyan'
       direction='column'
       justify='space-between'
+      align='center'
     >
       <BocalHeaderArea
         currentPageView={currentPageView}
