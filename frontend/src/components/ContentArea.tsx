@@ -22,7 +22,7 @@ export default function ContentArea({ currentPageView }: ContentAreaProps) {
       user: 'leu-lee',
     },
     {
-      title: 'Rainbow spinning wheel',
+      title: 'Rainbow spinning wheel omg heeeeeeeelp',
       category: 'Tech',
       description: 'Help me!',
       flag: true,

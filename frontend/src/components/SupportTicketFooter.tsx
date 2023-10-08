@@ -15,18 +15,18 @@ export default function SupportTicketFooter({
 }: SupportTicketFooterProp) {
   return (
     <Flex
-      h='25%'
+      h='20%'
       justify='space-between'
       w='100%'
       align='center'
       gap='30'
-      bg={`linear-gradient(-90deg, #25262b 15%, ${
+      bg={`linear-gradient(90deg, #25262b 15%, ${
         status ? '#2D8B00' : '#F75560'
       } 100%)`}
     >
       <Flex align='center'>
-        <Avatar color='black'></Avatar>
-        <Text c='black'>{user}</Text>
+        <Avatar color='cyan'></Avatar>
+        <Text c='blue'>{user}</Text>
       </Flex>
       <Flex justify='space-around' mr='3%' w='32%'>
         <Badge color='black'>{importance}</Badge>

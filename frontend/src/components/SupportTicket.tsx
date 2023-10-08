@@ -12,7 +12,7 @@ export default function SupportTicket({ ticket }: SupportTicketProps) {
   return (
     <Card
       w='20vw'
-      h='22vh'
+      h='33vh'
       p='0'
       bg='#232629'
       style={{

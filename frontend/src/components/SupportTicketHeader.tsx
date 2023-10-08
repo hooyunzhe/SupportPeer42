@@ -1,4 +1,4 @@
-import { Avatar, Badge, Flex, Title } from '@mantine/core';
+import { Avatar, Badge, Flex, Title, Text } from '@mantine/core';
 
 interface SupportTicketHeaderProps {
   title: string;
@@ -11,23 +11,19 @@ export default function SupportTicketHeader({
 }: SupportTicketHeaderProps) {
   return (
     <Flex
-      bg={`linear-gradient(90deg, #25262b 15%, ${
+      bg={`linear-gradient(-90deg, #25262b 15%, ${
         status ? '#2D8B00' : '#F75560'
       } 100%)`}
       w='100%'
-      h='25%'
-      justify={'space-between'}
+      h='20%'
       align='center'
+      justify={'space-between'}
+      px='1vw'
     >
-      <Flex ml='10'>
-        <Title order={3} c='white'>
-          {title}
-        </Title>
-      </Flex>
-      <Flex align='center' justify='space-between' w='60' mr='10'>
-        <Badge color='green'></Badge>
-        <Avatar src='elon.png' size='20'></Avatar>
-      </Flex>
+      <Text fw='900' size='1rem' c='white' truncate='end' h='40%' w='85%'>
+        {title}
+      </Text>
+      <Avatar src='elon.png' size='30' title='Bocalmusk'></Avatar>
     </Flex>
   );
 }

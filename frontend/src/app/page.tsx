@@ -13,20 +13,11 @@ export default function Home() {
     <Flex
       w='100vw'
       h='100vh'
-      bg='dark'
+      bg='#111111'
       direction='column'
       justify='flex-start'
       align='flex-start'
     >
-      <Text
-        pos='absolute'
-        m='3.5vw'
-        size='2vw'
-        variant='gradient'
-        gradient={{ from: 'darkgreen', to: 'blue', deg: 90 }}
-      >
-        Support Peer
-      </Text>
       <HeaderArea
         currentPageView={currentPageView}
         changePageView={(newPageView) => setCurrentPageView(newPageView)}
