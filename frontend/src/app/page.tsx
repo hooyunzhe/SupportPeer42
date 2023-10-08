@@ -6,6 +6,7 @@ import { PageView } from '@/types/PageView';
 import HeaderArea from '@/components/HeaderArea';
 import ContentArea from '@/components/ContentArea';
 import SupportTicketModal from '@/components/SupportTicketModal/SupportTicketModal';
+import CreateSupportTicketModal from '@/components/SupportTicketModal/CreateSupportTicketModal';
 
 export default function Home() {
   const [currentPageView, setCurrentPageView] = useState(PageView.DASHBOARD);
@@ -25,6 +26,7 @@ export default function Home() {
       />
       <ContentArea currentPageView={currentPageView} />
       <SupportTicketModal />
+      <CreateSupportTicketModal />
     </Flex>
   );
 }

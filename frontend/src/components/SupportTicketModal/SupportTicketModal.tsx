@@ -6,6 +6,7 @@ import {
   useSelectedSupportTicket,
   useSupportTicketActions,
 } from '@/lib/stores/useSupportTicketStore';
+import { useTextFieldInput } from '@/lib/stores/useUtilStore';
 
 export default function SupportTicketModal() {
   const selectedSupportTicket = useSelectedSupportTicket();
@@ -22,6 +23,7 @@ export default function SupportTicketModal() {
         size='30vw'
         radius='15px'
         style={{
+          overflow: 'hidden',
           borderRadius: '100px',
         }}
       >

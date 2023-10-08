@@ -1,6 +1,13 @@
 import { Button, Flex, Text, TextInput, Title } from '@mantine/core';
 import { PageView } from '@/types/PageView';
 import { useTextFieldInput, useUtilActions } from '@/lib/stores/useUtilStore';
+import {
+  useSupportTicketActions,
+  useSupportTickets,
+} from '@/lib/stores/useSupportTicketStore';
+import { SupportTicketType } from '@/types/SupportTicketType';
+import { useSelectedSupportTicket } from '@/lib/stores/useSupportTicketStore';
+import SupportTicket from './SupportTicket/SupportTicket';
 
 interface HeaderAreaProps {
   currentPageView: PageView;
@@ -11,8 +18,9 @@ export default function HeaderArea({
   currentPageView,
   changePageView,
 }: HeaderAreaProps) {
+  const supportTickets = useSupportTickets();
   const textFieldInput = useTextFieldInput();
-  const { setTextFieldInput } = useUtilActions();
+  const { setTextFieldInput, setCreateTicket } = useUtilActions();
 
   return (
     <Flex w='100%' h='25%' py='3vh' justify='center' align='center'>
@@ -39,8 +47,8 @@ export default function HeaderArea({
             value={textFieldInput}
             onChange={(event) => setTextFieldInput(event.target.value)}
           />
-          <Button size='xl' color='dark'>
-            Next
+          <Button size='xl' color='dark' onClick={() => setCreateTicket(true)}>
+            Create Ticket
           </Button>
         </Flex>
       </Flex>
