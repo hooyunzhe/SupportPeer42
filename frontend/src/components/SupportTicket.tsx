@@ -2,7 +2,7 @@ import { Card } from '@mantine/core';
 import SupportTicketHeader from './SupportTicketHeader';
 import SupportTicketContent from './SupportTicketContent';
 import SupportTicketFooter from './SupportTicketFooter';
-import { SupportTicket } from '@/types/SupportTicketType';
+import SupportTicket from '@/types/SupportTicketType';
 
 interface SupportTicketProps {
   ticket: SupportTicket;
@@ -25,6 +25,7 @@ export default function SupportTicket({ ticket }: SupportTicketProps) {
         user={ticket.user}
         importance={ticket.importance}
         category={ticket.category}
+        status={ticket.status}
       />
     </Card>
   );
